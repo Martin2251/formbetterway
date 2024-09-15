@@ -2,8 +2,8 @@
 
 export default function Home() {
   return (
-    <div>
-      <p>hello from next js</p>
-    </div>
+    <section className="min-h-screen w-screen flex flex-col items-center justify-center px-5">
+     <h1>Contact us</h1>
+    </section>
   );
 }
