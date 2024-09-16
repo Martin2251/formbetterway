@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
 import { TalkToSalesAction } from "./actions";
+import { SubmitButton } from "./components/SubmitButton";
 
 
 export default function Home() {
@@ -42,7 +43,7 @@ export default function Home() {
                 <Label>Question or Problem</Label>
                 <Textarea className="h-32" placeholder="please share some details about your needs" name="message"/>
               </div>
-              <Button type="submit">Submit</Button>
+              <SubmitButton />
             </form>
           </TabsContent>
           <TabsContent value="support">
