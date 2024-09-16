@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Label } from "@/components/ui/label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 
 export default function Home() {
@@ -17,6 +18,16 @@ export default function Home() {
               Suppoer
             </TabsTrigger>
           </TabsList>
+
+          <TabsContent value="sales">
+            <p className="text-muted-foreground text-sm">You want to integrate your product with us ? We can help you please contact us down below.</p>
+            <form>
+              <div className="grid space-y-1">
+                <Label>Name</Label>
+
+              </div>
+            </form>
+          </TabsContent>
         </CardContent>
       </Tabs>
      </Card>
