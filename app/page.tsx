@@ -7,11 +7,11 @@ export default function Home() {
     <section className="min-h-screen w-screen flex flex-col items-center justify-center px-5">
      <h1 className="text-4xl font-bold">Contact us</h1>
      <Card className="max-w-[500px] w-full">
-      <Tabs>
+      <Tabs defaultValue="sales">
         <CardContent>
-          <TabsList>
+          <TabsList className="grid grid-cols-2">
             <TabsTrigger value="sales">
-              tALK TO SALES
+             Talk to Sales
             </TabsTrigger>
             <TabsTrigger value="support">
               Suppoer
