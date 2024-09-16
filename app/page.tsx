@@ -55,6 +55,14 @@ export default function Home() {
                 <Label>Email</Label>
                 <Input placeholder="John.Doe@example.com" />
               </div>
+              <div className="grid space-y-1">
+                <Label>Problem</Label>
+                <Textarea placeholder="what is wrong" className="h-32" />
+                </div>
+                <div className="grid space-y-1">
+                  <Label>Asset</Label>
+                  <Input type="file" />
+                </div>
             </form>
           </TabsContent>
 
