@@ -43,6 +43,14 @@ export default function Home() {
               <Button>Submit</Button>
             </form>
           </TabsContent>
+          <TabsContent value="support">
+            <p className="text-muted-foreground text-sm">Troubleshoot a technical issue or payment problem </p>
+            <form className="flex flex-col gap-y-4 mt-5">
+
+            </form>
+          </TabsContent>
+
+
         </CardContent>
       </Tabs>
      </Card>
