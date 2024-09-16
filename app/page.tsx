@@ -24,28 +24,30 @@ export default function Home() {
 
           <TabsContent value="sales">
             <p className="text-muted-foreground text-sm">You want to integrate your product with us ? We can help you please contact us down below.</p>
-            <form className="flex flex-col gap-y-4 mt-5">
+            <form className="flex flex-col gap-y-4 mt-5" action="https://getform.io/f/bkkgwxyb" method="POST">
+            <input type="hidden" name="_gotcha" /> 
               <div className="grid space-y-1">
                 <Label>Name</Label>
-                <Input placeholder="john doe"></Input>
+                <Input placeholder="john doe" name="name"></Input>
              
 
               </div>
               <div className="grid space-y-1">
                 <Label>Email</Label>
-                <Input placeholder="john.doe@example.com"  />
+                <Input placeholder="john.doe@example.com" name="email" />
 
               </div>
               <div className="grid space-y-1">
                 <Label>Question or Problem</Label>
-                <Textarea className="h-32" placeholder="please share some details about your needs" />
+                <Textarea className="h-32" placeholder="please share some details about your needs" name="message"/>
               </div>
-              <Button>Submit</Button>
+              <Button type="submit">Submit</Button>
             </form>
           </TabsContent>
           <TabsContent value="support">
             <p className="text-muted-foreground text-sm">Troubleshoot a technical issue or payment problem </p>
             <form className="flex flex-col gap-y-4 mt-5">
+            <input type="hidden" name="_gotcha" /> 
               <div className="grid space-y-1">
                 <Label>Name</Label>
                 <Input placeholder="John Doe"  />
@@ -63,6 +65,7 @@ export default function Home() {
                   <Label>Asset</Label>
                   <Input type="file" />
                 </div>
+                <Button>Submit</Button>
             </form>
           </TabsContent>
 
