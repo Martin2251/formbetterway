@@ -1,4 +1,6 @@
+import { Button } from "@/components/ui/button";
 import { CheckIcon } from "lucide-react";
+import Link from "next/link";
 
 export default function SuccessRoute(){
     return(
@@ -8,6 +10,12 @@ export default function SuccessRoute(){
                     <CheckIcon className="size-10 text-green-500"  />
                 </div>
                 <h2 className="mt-6 text-xl font-semibold">Success we got your message</h2>
+                <p className="mt-2 mb-8 text-center text-sm text-muted-foreground"> our team will come back to you shortly!</p>
+                <Button asChild>
+                    <Link href="/">
+                    Go back to Home Page
+                    </Link>
+                    </Button>
             </div>
         </section>
     )

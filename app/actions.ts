@@ -8,4 +8,9 @@ export async function TalkToSalesAction(formData:FormData){
         method: 'POST',
         body:formData
     })
+
+
+    if(!response.ok){
+        throw new Error("")
+    }
 }
