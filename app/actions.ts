@@ -1,5 +1,7 @@
 "use server"
 
+import { redirect } from "next/navigation"
+
 // store our server actions 
 
 export async function TalkToSalesAction(formData:FormData){
@@ -11,6 +13,8 @@ export async function TalkToSalesAction(formData:FormData){
 
 
     if(!response.ok){
-        throw new Error("")
+        throw new Error("Something went wrong")
     }
+
+    return redirect("/success")
 }
