@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
+import { TalkToSalesAction } from "./actions";
 
 
 export default function Home() {
@@ -24,7 +25,7 @@ export default function Home() {
 
           <TabsContent value="sales">
             <p className="text-muted-foreground text-sm">You want to integrate your product with us ? We can help you please contact us down below.</p>
-            <form className="flex flex-col gap-y-4 mt-5" action="https://getform.io/f/bkkgwxyb" method="POST">
+            <form className="flex flex-col gap-y-4 mt-5" action={TalkToSalesAction}>
             <input type="hidden" name="_gotcha" /> 
               <div className="grid space-y-1">
                 <Label>Name</Label>
