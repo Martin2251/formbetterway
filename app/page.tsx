@@ -1,6 +1,9 @@
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Textarea } from "@/components/ui/textarea";
 
 
 export default function Home() {
@@ -21,11 +24,23 @@ export default function Home() {
 
           <TabsContent value="sales">
             <p className="text-muted-foreground text-sm">You want to integrate your product with us ? We can help you please contact us down below.</p>
-            <form>
+            <form className="flex flex-col gap-y-4 mt-5">
               <div className="grid space-y-1">
                 <Label>Name</Label>
+                <Input placeholder="john doe"></Input>
+             
 
               </div>
+              <div className="grid space-y-1">
+                <Label>Email</Label>
+                <Input placeholder="john.doe@example.com"  />
+
+              </div>
+              <div className="grid space-y-1">
+                <Label>Question or Problem</Label>
+                <Textarea className="h-32" placeholder="please share some details about your needs" />
+              </div>
+              <Button>Submit</Button>
             </form>
           </TabsContent>
         </CardContent>
