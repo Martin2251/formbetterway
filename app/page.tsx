@@ -46,7 +46,15 @@ export default function Home() {
           <TabsContent value="support">
             <p className="text-muted-foreground text-sm">Troubleshoot a technical issue or payment problem </p>
             <form className="flex flex-col gap-y-4 mt-5">
+              <div className="grid space-y-1">
+                <Label>Name</Label>
+                <Input placeholder="John Doe"  />
+              </div>
 
+              <div className="grid space-y-1">
+                <Label>Email</Label>
+                <Input placeholder="John.Doe@example.com" />
+              </div>
             </form>
           </TabsContent>
 
