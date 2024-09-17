@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -53,12 +55,12 @@ export default function Home() {
               </div>
               <div className="grid space-y-1">
                 <Label>Email</Label>
-                <Input placeholder="john.doe@example.com" name="email" />
+                <Input name={salesFields.email.name} key={salesFields.email.key} defaultValue={salesFields.email.initialValue} placeholder="john.doe@example.com"  />
 
               </div>
               <div className="grid space-y-1">
                 <Label>Question or Problem</Label>
-                <Textarea className="h-32" placeholder="please share some details about your needs" name="message"/>
+                <Textarea className="h-32" placeholder="please share some details about your needs" name={salesFields.message.name} key={salesFields.message.key} defaultValue={salesFields.message.initialValue}/>
               </div>
               <SubmitButton />
             </form>
