@@ -6,9 +6,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
 import { TalkToSalesAction } from "./actions";
 import { SubmitButton } from "./components/SubmitButton";
+import { useFormState } from "react-dom";
 
 
 export default function Home() {
+  const [salesResult, salesAction] = useFormState(TalkToSalesAction,undefined)
+  // in next 15 useFormState is useActionState
   return (
     <section className="min-h-screen w-screen flex flex-col items-center justify-center px-5">
      <h1 className="text-4xl font-bold mb-7">Contact us</h1>
@@ -26,7 +29,7 @@ export default function Home() {
 
           <TabsContent value="sales">
             <p className="text-muted-foreground text-sm">You want to integrate your product with us ? We can help you please contact us down below.</p>
-            <form className="flex flex-col gap-y-4 mt-5" action={TalkToSalesAction}>
+            <form className="flex flex-col gap-y-4 mt-5" action={salesAction}>
             <input type="hidden" name="_gotcha" /> 
               <div className="grid space-y-1">
                 <Label>Name</Label>

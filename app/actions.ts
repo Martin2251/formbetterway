@@ -6,7 +6,8 @@ import { submissionSchema } from "./zodSchema"
 
 // store our server actions 
 
-export async function TalkToSalesAction(formData:FormData){
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function TalkToSalesAction(prevState:any,formData:FormData){
 
     const submission = parseWithZod(formData,{
         schema:submissionSchema,
