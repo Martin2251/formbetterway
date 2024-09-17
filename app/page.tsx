@@ -7,11 +7,21 @@ import { Textarea } from "@/components/ui/textarea";
 import { TalkToSalesAction } from "./actions";
 import { SubmitButton } from "./components/SubmitButton";
 import { useFormState } from "react-dom";
+import { useForm } from "@conform-to/react";
+import { parseWithZod } from "@conform-to/zod";
 
 
 export default function Home() {
   const [salesResult, salesAction] = useFormState(TalkToSalesAction,undefined)
   // in next 15 useFormState is useActionState
+
+  const [salesForm, salesField] = useForm({
+    lastResult:salesResult,
+
+    onValidate({formData}){
+      return parseWithZod
+    }
+  })
   return (
     <section className="min-h-screen w-screen flex flex-col items-center justify-center px-5">
      <h1 className="text-4xl font-bold mb-7">Contact us</h1>
