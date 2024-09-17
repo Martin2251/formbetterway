@@ -9,6 +9,7 @@ import { SubmitButton } from "./components/SubmitButton";
 import { useFormState } from "react-dom";
 import { useForm } from "@conform-to/react";
 import { parseWithZod } from "@conform-to/zod";
+import { submissionSchema } from "./zodSchema";
 
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
     lastResult:salesResult,
 
     onValidate({formData}){
-      return parseWithZod
+      return parseWithZod(formData,{schema:submissionSchema})
     }
   })
   return (
