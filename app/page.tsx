@@ -21,7 +21,10 @@ export default function Home() {
 
     onValidate({formData}){
       return parseWithZod(formData,{schema:submissionSchema})
-    }
+    }, 
+
+    shouldValidate:'onBlur',
+    shouldRevalidate:"onInput",
   })
   return (
     <section className="min-h-screen w-screen flex flex-col items-center justify-center px-5">
