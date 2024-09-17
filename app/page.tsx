@@ -50,17 +50,19 @@ export default function Home() {
               <div className="grid space-y-1">
                 <Label>Name</Label>
                 <Input placeholder="john doe" name={salesFields.name.name} defaultValue={salesFields.name.initialValue} key={salesFields.name.key} />
+                <p className="text-red-500 text-sm">{salesFields.name.errors}</p>
              
 
               </div>
               <div className="grid space-y-1">
                 <Label>Email</Label>
                 <Input name={salesFields.email.name} key={salesFields.email.key} defaultValue={salesFields.email.initialValue} placeholder="john.doe@example.com"  />
-
+                <p className="text-red-500 text-sm">{salesFields.email.errors}</p>
               </div>
               <div className="grid space-y-1">
                 <Label>Question or Problem</Label>
                 <Textarea className="h-32" placeholder="please share some details about your needs" name={salesFields.message.name} key={salesFields.message.key} defaultValue={salesFields.message.initialValue}/>
+                <p className="text-red-500 text-sm">{salesFields.email.errors}</p>
               </div>
               <SubmitButton />
             </form>
