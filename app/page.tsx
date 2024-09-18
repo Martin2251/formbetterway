@@ -62,7 +62,7 @@ export default function Home() {
               <div className="grid space-y-1">
                 <Label>Question or Problem</Label>
                 <Textarea className="h-32" placeholder="please share some details about your needs" name={salesFields.message.name} key={salesFields.message.key} defaultValue={salesFields.message.initialValue}/>
-                <p className="text-red-500 text-sm">{salesFields.email.errors}</p>
+                <p className="text-red-500 text-sm">{salesFields.message.errors}</p>
               </div>
               <SubmitButton />
             </form>
