@@ -39,7 +39,7 @@ export default function Home() {
              Talk to Sales
             </TabsTrigger>
             <TabsTrigger value="support">
-              Suppoer
+              Support (doesnt work!!)
             </TabsTrigger>
           </TabsList>
 
